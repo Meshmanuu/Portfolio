@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: right;
+
+}
+
+.navbar:hover {
+    background-color: #e8491d;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 25px;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.home-section {
+    background: #f4f4f4;
+}
+
+.home-section h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-family: monospace, serif;
+}
+
+.home-section p {
+    font-family: monospace, serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.img-ebei {
+    background-color: whitesmoke;
+}
+
+
+.home-section span {
+    color: #e8491d;
+}
+
+
+.about-section {
+    font-family: monospace, serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #e8491d;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: 5px;
+    padding-left: 0%;
+
+}
+
+.skills-section {
+    background-color: whitesmoke;
+    font-family: monospace, serif;
+    font-size: 1.5rem;
+}
+
+.skills-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    
+
+
+}
+
+
+.skills-section li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    padding: 30px;
+    font-family: monospace, serif;
+}
+
+.skills-section li i {
+    color: #e8491d;
+    margin-right: 10px;
+    font-size: 2rem;
+}
+
+
+.skills-section ul li span {
+    font-weight: bold;
+    color: #e8491d;
+}
+
+.services-section {
+    background: white;
+    font-family: monospace, serif;
+    font-size: 1.2rem;
+}
+
+.services-section h3 {
+    color: #e8491d;
+}
+
+.services-section .service {
+    margin-bottom: 1.5rem;
+}
+
+.service h3 {
+    color: #e8491d;
+}
+
+.portfolio-section {
+    font-family: monospace, serif;
+    font-size: 1.2rem;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+}
+
+.portfolio-item {
+    margin-bottom: 2rem;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #e8491d;
+    text-decoration-color: none;
+    color: white;
+    display: inline-block;
+}
+
+.portfolio-item h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: monospace, serif;
+}
+
+
+
+.contact-section {
+    font-family: monospace, serif;
+    font-size: 1.2rem;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-section form button {
+    padding: 0.7rem 1.5rem;
+    background-color: #e8491d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-family: monospace, serif;
+    font-size: 1.2rem;
+}
+
+.social-media {
+    margin-top: 1rem;
+}
+
+.social-media a {
+    color: #e8491d;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.social-media a:hover {
+    color: white;
+}
