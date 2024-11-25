@@ -17,7 +17,9 @@ nav {
 .navbar:hover {
     background-color: #e8491d;
 }
-
+.navbar{
+   position: sticky; 
+}
 
 nav ul {
     list-style: none;
