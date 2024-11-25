@@ -11,14 +11,14 @@ nav {
     color: #fff;
     padding: 1rem;
     text-align: right;
-    position:sticky;
+  
 }
 
 .navbar:hover {
     background-color: #e8491d;
 }
 .navbar{
-   position: sticky; 
+   position: fixed; 
 }
 
 nav ul {
