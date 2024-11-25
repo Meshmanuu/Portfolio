@@ -18,7 +18,8 @@ nav {
     background-color: #e8491d;
 }
 .navbar{
-   position: fixed; 
+   position: fixed;
+   top: 0; 
 }
 
 nav ul {
