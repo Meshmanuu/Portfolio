@@ -25,6 +25,11 @@ nav {
     padding: 10px 20px;
 }
 
+.navbar .logo img{
+    height: 50px;
+    width: auto;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
