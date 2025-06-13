@@ -453,3 +453,13 @@ footer p {
         margin: 0 8px;
     }
 }
+/* Existing .img-ebei styles */
+.img-ebei {
+    background-color: whitesmoke; /* This applies to the image's background, if any */
+    display: block; /* Ensures the image behaves as a block element */
+    margin-left: auto; /* Centers the image horizontally */
+    margin-right: auto; /* Centers the image horizontally */
+    padding-bottom: 50px; /* Maintains your desired bottom padding */
+    max-width: 100%; /* Ensures the image never exceeds its parent container's width */
+    height: auto; /* Maintains the image's aspect ratio */
+}
