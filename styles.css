@@ -1,3 +1,4 @@
+/* Base styles - these apply to all screen sizes first */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,62 +7,61 @@ body {
     line-height: 1.6;
 }
 
+/* --- Navigation Bar --- */
 nav {
     background-color: #333;
-    /* color: #fff; */
     padding: 1rem;
-    text-align: right;
-  
+    text-align: right; /* Default for larger screens */
 }
 
-
-
 .navbar {
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     padding: 5px 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Vertically align items in the navbar */
 }
 
-.logo{
-    width: 200px;
-    height: 100px;
-    
-    
+.logo {
+    width: 200px; /* Adjust as needed, but consider max-width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure logo scales down on smaller screens */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Remove default margin */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 25px;
+    display: inline-block; /* Use inline-block for better control over spacing */
+    margin: 0 15px; /* Slightly reduce margin for better fit on medium screens */
     font-size: 1rem;
     font-weight: bold;
-
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-
+    white-space: nowrap; /* Prevent menu items from wrapping */
 }
 
+/* --- Sections --- */
 section {
-    padding: 2rem;
+    padding: 2rem 1rem; /* Add horizontal padding for smaller screens */
     text-align: center;
 }
 
 .home-section {
     background: #f4f4f4;
+    padding: 3rem 1rem; /* More padding for home section */
 }
 
 .home-section h1 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Slightly larger for impact */
     margin: 0;
     font-family: monospace, serif;
 }
@@ -70,116 +70,113 @@ section {
     font-family: monospace, serif;
     font-size: 1.2rem;
     font-weight: bold;
+    max-width: 800px; /* Limit paragraph width for readability */
+    margin: 0.5rem auto; /* Center the paragraph */
 }
 
 .img-ebei {
-    background-color: whitesmoke;
+    background-color: whitesmoke; /* This might be better applied to an image container if you have one */
 }
-
 
 .home-section span {
     color: #e8491d;
 }
 
-
 .about-section {
     font-family: monospace, serif;
     font-size: 1.2rem;
     font-weight: bold;
+    padding: 2rem 1rem;
 }
-
 
 .button {
     display: inline-block;
-    padding: 10px;
+    padding: 12px 25px; /* More generous padding */
     background-color: #e8491d;
     color: #fff;
     text-decoration: none;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem; /* More space above the button */
     border-radius: 15px;
-    padding-left: 0%;
-    font-size: 2rem;
+    font-size: 1.5rem; /* Adjust for better scale */
     font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.button:hover {
+    background-color: #d13d18; /* Slightly darker on hover */
 }
 
 .skills-section {
     background-color: whitesmoke;
     font-family: monospace, serif;
     font-size: 1.5rem;
+    padding: 2rem 1rem;
+}
+
+.skills-section h2 {
+    margin-bottom: 2rem;
 }
 
 .skills-section ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: space-around;
-    
-
-
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items when they wrap */
+    gap: 20px; /* Space between skill items */
 }
-
 
 .skills-section li {
     display: flex;
+    flex-direction: column; /* Stack icon and text */
     align-items: center;
     margin-bottom: 10px;
     font-size: 1rem;
-    padding: 30px;
+    padding: 20px; /* Slightly less padding for smaller screens */
     font-family: monospace, serif;
+    flex-basis: calc(33% - 40px); /* Approx 3 items per row on larger screens */
+    min-width: 150px; /* Ensure a minimum width for each skill item */
+    box-sizing: border-box; /* Include padding in width calculation */
+    background-color: #fff; /* Add a subtle background for skill items */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .skills-section li i {
     color: #e8491d;
-    margin-right: 10px;
-    font-size: 2rem;
+    margin-bottom: 10px; /* Space between icon and text */
+    font-size: 2.5rem; /* Larger icons */
 }
-
 
 .skills-section ul li span {
     font-weight: bold;
     color: #e8491d;
+    text-align: center;
 }
 
 .services-section {
     background: white;
     font-family: monospace, serif;
     font-size: 1.2rem;
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
 .services-section h3 {
     color: #e8491d;
-}
-
-.services-section .service {
     margin-bottom: 1.5rem;
 }
 
-
-
-
-
-
-.services-section {
-    text-align: center;
-    padding: 20px;
-}
-
 .service {
-    margin-top: 20px;
+    margin-bottom: 2rem; /* Space between service sections */
 }
 
-.service h3 {
-    margin-bottom: 20px;
-}
-.service p {
-    text-align: center;
-}
 .service > div {
     display: flex;
     justify-content: center;
-    gap: 20px; 
-    flex-wrap: wrap; 
+    gap: 30px; /* More space between service items */
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 
@@ -188,17 +185,23 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 45%; 
-    padding: 10px;
-    
-   
+    width: calc(50% - 30px); /* Two items per row on larger screens */
+    max-width: 400px; /* Limit max width of service item */
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #eee; /* Subtle border */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 1rem; /* Space between wrapped service items */
 }
-.service > div > div p{
+
+.service > div > div p {
     text-align: center;
+    font-size: 1rem;
 }
 
 .service img {
-    max-width: 100%;
+    max-width: 150px; /* Set a reasonable max-width for service images */
     height: auto;
     margin-bottom: 20px;
 }
@@ -206,26 +209,16 @@ section {
 .service button {
     padding: 10px 20px;
     border: none;
-    background-color: #007BFF;
+    background-color: #e8491d; /* Consistent button color */
     color: white;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .service button:hover {
-    background-color: #0056b3; 
-}
-
-
-
-
-
-
-
-
-.service h3 {
-    color: #e8491d;
+    background-color: #d13d18;
 }
 
 .portfolio-section {
@@ -233,18 +226,23 @@ section {
     font-size: 1.2rem;
     background-color: whitesmoke;
     text-align: center;
-    padding: 20px;
+    padding: 2rem 1rem;
 }
 
 .portfolio-item {
     margin-bottom: 2rem;
-    width: 50%;
+    width: calc(50% - 20px); /* Two items per row with some gap */
+    max-width: 500px; /* Limit max width */
     height: auto;
     border-radius: 10px;
     background-color: #e8491d;
-    text-decoration-color: none;
     color: white;
-    display: inline-block;
+    display: inline-block; /* Use inline-block for basic layout */
+    vertical-align: top; /* Align items to the top */
+    box-sizing: border-box;
+    padding: 1.5rem;
+    text-decoration: none; /* Ensure text decoration is handled */
+    margin: 10px; /* Add margin for spacing between inline-block items */
 }
 
 .portfolio-item h5 {
@@ -252,15 +250,14 @@ section {
     font-weight: bold;
     color: #fff;
     font-family: monospace, serif;
+    margin-bottom: 0.5rem;
 }
-
-
 
 .contact-section {
     font-family: monospace, serif;
     font-size: 1.2rem;
     background-color: white;
-    padding: 20px;
+    padding: 2rem 1rem;
     text-align: center;
     margin-top: 2rem;
 }
@@ -274,46 +271,185 @@ section {
 .contact-section form input,
 .contact-section form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 1rem;
+    padding: 12px; /* Slightly more padding */
+    margin-bottom: 1.5rem; /* More space between fields */
     border-radius: 5px;
     border: 1px solid #ccc;
+    box-sizing: border-box; /* Include padding and border in width */
 }
 
 .contact-section form button {
-    padding: 0.7rem 1.5rem;
+    padding: 0.8rem 1.8rem; /* More generous padding */
     background-color: #e8491d;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section form button:hover {
+    background-color: #d13d18;
 }
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.5rem 1rem; /* More padding */
     margin-top: 2rem;
 }
 
 footer p {
     margin: 0;
     font-family: monospace, serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Slightly smaller for footer text */
 }
 
 .social-media {
     margin-top: 1rem;
+    padding-bottom: 1rem; /* Add some padding below social icons */
 }
 
 .social-media a {
     color: #e8491d;
-    margin: 0 10px;
+    margin: 0 12px; /* Slightly more margin */
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.2rem; /* Slightly larger icons */
+    transition: color 0.3s ease;
 }
 
 .social-media a:hover {
     color: white;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For screens smaller than 768px (e.g., tablets and large phones) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack logo and nav links */
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        display: block; /* Stack nav items vertically */
+        margin: 10px 0; /* More vertical space */
+        font-size: 1.1rem;
+    }
+
+    .home-section h1 {
+        font-size: 2rem;
+    }
+
+    .home-section p {
+        font-size: 1rem;
+    }
+
+    .skills-section ul {
+        flex-direction: column; /* Stack skills vertically on smaller screens */
+        align-items: center;
+    }
+
+    .skills-section li {
+        width: 80%; /* Make skill items take more width */
+        flex-basis: auto; /* Remove flex-basis for stacking */
+    }
+
+    .service > div > div {
+        width: 90%; /* Make service items take more width on smaller screens */
+        max-width: none; /* Remove max-width constraint */
+    }
+
+    .portfolio-item {
+        width: 90%; /* Make portfolio items full width on smaller screens */
+        margin: 10px auto; /* Center them */
+        display: block; /* Stack them */
+    }
+
+    .contact-section form {
+        padding: 0 15px; /* Add some horizontal padding to the form */
+    }
+}
+
+/* For screens smaller than 480px (e.g., small phones) */
+@media (max-width: 480px) {
+    nav {
+        padding: 0.8rem;
+    }
+
+    .logo {
+        width: 150px; /* Smaller logo for very small screens */
+    }
+
+    nav ul li {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .home-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-section p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    .skills-section li {
+        padding: 15px;
+    }
+
+    .skills-section li i {
+        font-size: 2rem;
+    }
+
+    .services-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .service > div > div {
+        width: 95%; /* Almost full width for service items */
+        padding: 15px;
+    }
+
+    .portfolio-item {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .portfolio-item h5 {
+        font-size: 1.2rem;
+    }
+
+    .contact-section form input,
+    .contact-section form textarea {
+        padding: 10px;
+    }
+
+    .contact-section form button {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+    .social-media a {
+        font-size: 1.8rem;
+        margin: 0 8px;
+    }
 }
